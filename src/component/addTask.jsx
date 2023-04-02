@@ -8,11 +8,11 @@ const AddTask = ({ onAdd }) => {
 
    const onSubmit =(e) => {
         e.preventDefault()
-        if(!title){
+        if(!title){ 
             alert('Please add a task')
             return
         }
-        onAdd({title, day, reminder})
+        onAdd({title, day, reminder}) 
         setTask('')
         setDate('')
         setReminder(false)
@@ -33,7 +33,6 @@ const AddTask = ({ onAdd }) => {
                 <label htmlFor="">
                     Date & Time
                 </label>
-
                 <input type="text" value={day} placeholder='Add Day & Time' onChange={(e) => setDate(e.target.value)} />
             </div>
             <div className="form-control for m-control-check">

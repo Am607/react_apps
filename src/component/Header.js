@@ -33,15 +33,15 @@ import Button from './Button'
 
 //impt
 
-const Header = ({ isVisible}) => {
+const Header = ({ onAdd , isVisible,}) => {
 
-    const onclick = (e) => {
-        console.log('click' + e)
-    };
+    // const onclick = (e) => {
+    //     console.log('click' + e)
+    // };
     return (
         <div>
             {/* <p> {props.title + props.name}</p> */}
-            <Button name='click' />
+            <Button name={ isVisible ? 'Close' : 'Add'}  onclick={onAdd} color={isVisible ? "red" : "Green"}/>
         </div>
 
     )
